@@ -3,7 +3,7 @@
 ### 介绍
 #### StatefulLiveData
 * 辅助android开发者在中间层向view层传递数据和状态的LiveData。
-* kotlin协程推荐使用
+* kotlin协程项目推荐使用
 1. 不用考虑在中间层切线程，直接通过`postValue`方法把数据提交到`SatefulLiveData`中，观察`StatefulLiveData`的View层代码会自动切换到主线程处理数据。
 2. 在子线程中发生的异常会提交到`StatefulLiveData`中，由`view`层进行详尽的分析与处理。
 3. 子线程可以随时将自己处理数据的进度与状态提交到`StatefulLiveData`中，`view`层可及时做出响应。
